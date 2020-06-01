@@ -1,0 +1,13 @@
+.modal-content {
+    background-color: #233140;
+    border-radius: 2px;
+}
+
+.modal .close {
+    color: rgba(255, 255, 255, 0.93);
+}
+
+.modal .modal-header,
+.modal .modal-footer {
+    border-color: #00a077;
+}

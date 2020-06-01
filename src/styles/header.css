@@ -1,0 +1,39 @@
+.header {
+    background-color: #233140;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header > a {
+    color: white;
+}
+
+.header img.avatar-icon {
+    width: 36px;
+    border: 1px solid black;
+}
+
+.header
+a.navbar-brand:hover > img.avatar-icon {
+    border-color: #00bc8c;
+}
+
+.header .nav-item {
+    margin-right: 0.5rem;
+}
+
+.header .nav-item > a {
+    color: rgba(232, 232, 232, 0.93);
+    border-bottom: 2px solid #233140;
+}
+
+.header .nav-item:not(.active) > a:hover {
+    color: white;
+    border-bottom-color: white;
+}
+
+.header .nav-item.active {
+    color: white;
+    border-bottom: 2px solid #00bc8c;
+}

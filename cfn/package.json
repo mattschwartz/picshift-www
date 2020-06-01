@@ -1,0 +1,32 @@
+{
+    "name": "cfn",
+    "version": "0.1.0",
+    "bin": {
+        "cfn": "bin/cfn.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "cdk": "cdk",
+        "deploy": "tsc && cdk deploy"
+    },
+    "devDependencies": {
+        "@types/node": "8.10.45",
+        "typescript": "^3.3.3333",
+        "ts-node": "^8.1.0",
+        "aws-cdk": "^1.1.0"
+    },
+    "dependencies": {
+        "@aws-cdk/aws-apigateway": "^1.1.0",
+        "@aws-cdk/aws-cloudwatch": "^1.1.0",
+        "@aws-cdk/aws-iam": "^1.1.0",
+        "@aws-cdk/aws-lambda": "^1.1.0",
+        "@aws-cdk/aws-logs": "^1.1.0",
+        "@aws-cdk/aws-sns": "^1.1.0",
+        "@aws-cdk/aws-sns-subscriptions": "^1.1.0",
+        "@aws-cdk/core": "^1.1.0",
+        "@types/uuid": "^3.4.5",
+        "source-map-support": "^0.5.9",
+        "uuid": "^3.3.2"
+    }
+}

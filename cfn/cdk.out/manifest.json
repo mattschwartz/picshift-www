@@ -1,0 +1,780 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "WebsiteStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "WebsiteStack.template.json"
+      },
+      "metadata": {
+        "/WebsiteStack/MessageMeLambda-Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaTopic39683C2C",
+            "trace": [
+              "new Topic (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.ts:53:22)",
+              "buildSnsPublishTopic (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:12:19)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:191:23)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-Topic/contact@cassiius.dev/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaTopiccontactcassiiusdev669F0A5A",
+            "trace": [
+              "new Subscription (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-sns\\lib\\subscription.ts:82:5)",
+              "Topic.addSubscription (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:70:5)",
+              "buildSnsPublishTopic (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:15:11)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:191:23)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaExecutionRoleBB32E753",
+            "trace": [
+              "new Role (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:213:18)",
+              "buildLambdaRole (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:21:24)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:192:28)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaExecutionRoleDefaultPolicy263B7EAB",
+            "trace": [
+              "new Policy (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:102:22)",
+              "Role.addToPolicy (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:252:28)",
+              "Function.addToPrincipal (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:140:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:110:26)",
+              "Topic.grantPublish (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:97:22)",
+              "buildLambdaRole (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:24:11)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:192:28)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-CloudWatchLogsPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaCloudWatchLogsPolicyB443FFFC",
+            "trace": [
+              "new Policy (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:102:22)",
+              "buildLambdaRole (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:26:26)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:192:28)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaAD5E50B5",
+            "trace": [
+              "new Function (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:421:35)",
+              "buildMessageMeLambda (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:49:29)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:193:33)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/Code": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.ae04d2ca9945097eccd8276d2dec373855d2b16517352921396d566c010796b6.zip",
+              "id": "WebsiteStackMessageMeLambdaCodeB1B645C6",
+              "packaging": "file",
+              "sourceHash": "ae04d2ca9945097eccd8276d2dec373855d2b16517352921396d566c010796b6",
+              "s3BucketParameter": "MessageMeLambdaCodeS3BucketCEAB88EA",
+              "s3KeyParameter": "MessageMeLambdaCodeS3VersionKey4E20B2B0",
+              "artifactHashParameter": "MessageMeLambdaCodeArtifactHashEA3CC71E"
+            },
+            "trace": [
+              "new Asset (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:142:15)",
+              "AssetCode.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:144:20)",
+              "new Function (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:450:16)",
+              "buildMessageMeLambda (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:49:29)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:193:33)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/Code/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaCodeS3BucketCEAB88EA",
+            "trace": [
+              "new Asset (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:101:25)",
+              "AssetCode.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:144:20)",
+              "new Function (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:450:16)",
+              "buildMessageMeLambda (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:49:29)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:193:33)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/Code/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaCodeS3VersionKey4E20B2B0",
+            "trace": [
+              "new Asset (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:106:22)",
+              "AssetCode.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:144:20)",
+              "new Function (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:450:16)",
+              "buildMessageMeLambda (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:49:29)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:193:33)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/Code/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaCodeArtifactHashEA3CC71E",
+            "trace": [
+              "new Asset (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:111:23)",
+              "AssetCode.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:144:20)",
+              "new Function (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:450:16)",
+              "buildMessageMeLambda (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:49:29)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:193:33)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/ApiPermission.POST..v1.messages": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiPermissionPOSTv1messages39D869A9",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:171:5)",
+              "LambdaIntegration.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:60:18)",
+              "Method.renderIntegration (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:189:17)",
+              "new Method (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:130:25)",
+              "Resource.addMethod (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:140:12)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:136:14)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda/ApiPermission.Test.POST..v1.messages": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiPermissionTestPOSTv1messages3D5E76D3",
+            "trace": [
+              "Function.addPermission (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:171:5)",
+              "LambdaIntegration.bind (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\integrations\\lambda.ts:67:20)",
+              "Method.renderIntegration (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:189:17)",
+              "new Method (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:130:25)",
+              "Resource.addMethod (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:140:12)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:136:14)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayA8BDD6DA",
+            "trace": [
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:221:22)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayDeployment36B51F14959f764240a521b924d2479c85b2a465",
+            "trace": [
+              "new Deployment (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\deployment.ts:69:21)",
+              "LambdaRestApi.configureDeployment (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:377:32)",
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:236:10)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayDeploymentStageprodDDAC3162",
+            "trace": [
+              "new Stage (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\stage.ts:186:22)",
+              "LambdaRestApi.configureDeployment (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:387:30)",
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:236:10)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayEndpoint3FEAF65F",
+            "trace": [
+              "LambdaRestApi.configureDeployment (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:392:7)",
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:236:10)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayCloudWatchRole0DB2BE4A",
+            "trace": [
+              "new Role (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:213:18)",
+              "LambdaRestApi.configureCloudWatchRole (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:401:18)",
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:240:12)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayAccount345C22BE",
+            "trace": [
+              "LambdaRestApi.configureCloudWatchRole (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:406:22)",
+              "new RestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\restapi.ts:240:12)",
+              "new LambdaRestApi (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\lambda-api.ts:50:5)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:97:17)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Default/v1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayv1D8FFB9D2",
+            "trace": [
+              "new Resource (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:212:22)",
+              "RootResource.addResource (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:136:12)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:103:25)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Default/v1/messages/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayv1messages2F260E0C",
+            "trace": [
+              "new Resource (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:212:22)",
+              "Resource.addResource (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:136:12)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:104:25)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Default/v1/messages/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayv1messagesOPTIONS549CEF94",
+            "trace": [
+              "new Method (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:136:22)",
+              "Resource.addMethod (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:140:12)",
+              "addCorsOptions (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:67:17)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:106:5)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGateway/Default/v1/messages/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayv1messagesPOSTA221DD9F",
+            "trace": [
+              "new Method (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\method.ts:136:22)",
+              "Resource.addMethod (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\resource.ts:140:12)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:136:14)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGatewayMessageMeRequestModel/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayMessageMeRequestModelAA9AC26F",
+            "trace": [
+              "new Model (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\model.ts:175:22)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:108:30)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/WebsiteStack/MessageMeLambda-ApiGatewayMessageMeErrorResponseModel/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MessageMeLambdaApiGatewayMessageMeErrorResponseModel17D6B1B5",
+            "trace": [
+              "new Model (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\@aws-cdk\\aws-apigateway\\lib\\model.ts:175:22)",
+              "buildLambdaApiGateway (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:122:35)",
+              "new WebsiteStack (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\lib\\cfn-stack.ts:194:9)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\bin\\cfn.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (C:\\Users\\Matt\\Documents\\GitHub\\www\\cfn\\node_modules\\ts-node\\src\\bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.1.0",
+      "@aws-cdk/cx-api": "1.1.0",
+      "@aws-cdk/aws-iam": "1.1.0",
+      "@aws-cdk/region-info": "1.1.0",
+      "@aws-cdk/aws-sns": "1.1.0",
+      "@aws-cdk/aws-cloudwatch": "1.1.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.1.0",
+      "@aws-cdk/aws-lambda": "1.1.0",
+      "@aws-cdk/aws-ec2": "1.1.0",
+      "@aws-cdk/aws-ssm": "1.1.0",
+      "@aws-cdk/aws-sqs": "1.1.0",
+      "@aws-cdk/aws-kms": "1.1.0",
+      "@aws-cdk/aws-s3-assets": "1.1.0",
+      "@aws-cdk/assets": "1.1.0",
+      "@aws-cdk/aws-s3": "1.1.0",
+      "@aws-cdk/aws-events": "1.1.0",
+      "@aws-cdk/aws-apigateway": "1.1.0",
+      "jsii-runtime": "node.js/v8.12.0"
+    }
+  }
+}

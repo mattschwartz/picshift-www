@@ -1,0 +1,455 @@
+{
+  "Resources": {
+    "MessageMeTopicBBD53D7F": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "DisplayName": "SNS topic for the MessageMe system"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/MessageMeTopic/Resource"
+      }
+    },
+    "MessageMeTopicadmincassiiusdevDADF8D14": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "email",
+        "TopicArn": {
+          "Ref": "MessageMeTopicBBD53D7F"
+        },
+        "Endpoint": "admin@cassiius.dev"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/MessageMeTopic/admin@cassiius.dev/Resource"
+      }
+    },
+    "wwwlambdaexecutionrole62C213AB": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "lambda.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/www-lambda-execution-role/Resource"
+      }
+    },
+    "wwwlambdaexecutionroleDefaultPolicy02208155": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "MessageMeTopicBBD53D7F"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "wwwlambdaexecutionroleDefaultPolicy02208155",
+        "Roles": [
+          {
+            "Ref": "wwwlambdaexecutionrole62C213AB"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/www-lambda-execution-role/DefaultPolicy/Resource"
+      }
+    },
+    "MessageMeLambdaAD5E50B5": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "MessageMeLambdaCodeS3BucketCEAB88EA"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "MessageMeLambdaCodeS3VersionKey4E20B2B0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "MessageMeLambdaCodeS3VersionKey4E20B2B0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "WebsiteLambda::WebsiteLambda.Function::FunctionHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "wwwlambdaexecutionrole62C213AB",
+            "Arn"
+          ]
+        },
+        "Runtime": "dotnetcore2.1",
+        "Environment": {
+          "Variables": {
+            "snsEmailTopicArn": {
+              "Ref": "MessageMeTopicBBD53D7F"
+            }
+          }
+        },
+        "MemorySize": 256,
+        "Timeout": 30
+      },
+      "DependsOn": [
+        "wwwlambdaexecutionroleDefaultPolicy02208155",
+        "wwwlambdaexecutionrole62C213AB"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/MessageMeLambda/Resource",
+        "aws:asset:path": "asset.3cc9e984fe58fbc65569d2ba95243da557132d5deca9361630681109ef4a3699.zip",
+        "aws:asset:property": "Code"
+      }
+    },
+    "MessageMeLambdaApiPermissionPOSTv1messages39D869A9": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "MessageMeLambdaAD5E50B5",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "messageMeApi34CE009D"
+              },
+              "/",
+              {
+                "Ref": "messageMeApiDeploymentStageprod17BE5395"
+              },
+              "/POST/v1/messages"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/MessageMeLambda/ApiPermission.POST..v1.messages"
+      }
+    },
+    "MessageMeLambdaApiPermissionTestPOSTv1messages3D5E76D3": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "MessageMeLambdaAD5E50B5",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "messageMeApi34CE009D"
+              },
+              "/test-invoke-stage/POST/v1/messages"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/MessageMeLambda/ApiPermission.Test.POST..v1.messages"
+      }
+    },
+    "messageMeApi34CE009D": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "Message me API"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Resource"
+      }
+    },
+    "messageMeApiDeployment62786DAA76b43fcca042bfee2f0e057fd946cf2c": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "messageMeApi34CE009D"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "messageMeApiv1messagesPOSTD44B31B3",
+        "messageMeApiv1messages10FCD7AF",
+        "messageMeApiv1C99183E0"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Deployment/Resource"
+      }
+    },
+    "messageMeApiDeploymentStageprod17BE5395": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "messageMeApi34CE009D"
+        },
+        "DeploymentId": {
+          "Ref": "messageMeApiDeployment62786DAA76b43fcca042bfee2f0e057fd946cf2c"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/DeploymentStage.prod/Resource"
+      }
+    },
+    "messageMeApiCloudWatchRole6C2B5551": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "apigateway.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/CloudWatchRole/Resource"
+      }
+    },
+    "messageMeApiAccount70C875F3": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "messageMeApiCloudWatchRole6C2B5551",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "messageMeApi34CE009D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Account"
+      }
+    },
+    "messageMeApiv1C99183E0": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "messageMeApi34CE009D",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "v1",
+        "RestApiId": {
+          "Ref": "messageMeApi34CE009D"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Default/v1/Resource"
+      }
+    },
+    "messageMeApiv1messages10FCD7AF": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "messageMeApiv1C99183E0"
+        },
+        "PathPart": "messages",
+        "RestApiId": {
+          "Ref": "messageMeApi34CE009D"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Default/v1/messages/Resource"
+      }
+    },
+    "messageMeApiv1messagesPOSTD44B31B3": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "messageMeApiv1messages10FCD7AF"
+        },
+        "RestApiId": {
+          "Ref": "messageMeApi34CE009D"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "MessageMeLambdaAD5E50B5",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CfnStack/messageMeApi/Default/v1/messages/POST/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "MessageMeLambdaCodeS3BucketCEAB88EA": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"CfnStack/MessageMeLambda/Code\""
+    },
+    "MessageMeLambdaCodeS3VersionKey4E20B2B0": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"CfnStack/MessageMeLambda/Code\""
+    },
+    "MessageMeLambdaCodeArtifactHashEA3CC71E": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"CfnStack/MessageMeLambda/Code\""
+    }
+  },
+  "Outputs": {
+    "messageMeApiEndpoint95121083": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "messageMeApi34CE009D"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "messageMeApiDeploymentStageprod17BE5395"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}
